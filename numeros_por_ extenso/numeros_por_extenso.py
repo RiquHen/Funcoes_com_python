@@ -72,6 +72,7 @@ def dez(num):
         else:
             return f'{tens[d-1]} e '
 
+
 def continua():
     """ Verifa se o  usuário deseja contunuar lendo os numeros por extenso
     Returns:
@@ -85,23 +86,26 @@ def continua():
         return False
     else:
         return True
-    
+
+
 def teste_num(numero):
     """Verifica se o numero informado é inteiro e está entre 0 e 9999
     Args:
         numero (int):informado pelo usuario
-    Returns:  
-        int: após a verificação do numero ser válida 
+    Returns:
+        int: após a verificação do numero ser válida
     """
     try:
         if 9999 >= numero:
             return numero
-        else: # executa se Caso o numero digitado seja inteiro e maior que 9999 ou menor que 0
-            print('Por favor, apenas números entre 0 e 9999.')
-    except: # excuta se caso o valor informado naoseja um numero inteiro
+        else:  # executa se Caso o numero digitado seja inteiro e maior que 9999 ou menor que 0
+            print('0Por favor, apenas números entre 0 e 9999.')
+    except:  # excuta se caso o valor informado naoseja um numero inteiro
         print('Por favor!!! Apenas números inteiros, entre 0 e 9999.')
 
 # testa o numero e imprime a saida completa do numero por extenso, trata inclusive quando a saida do valor do digito das unidades deve ser adicionado a string[saida - numero por extenso]
+
+
 def por_extenso(num):
     sleep(3)
     os.system('cls')
@@ -109,7 +113,7 @@ def por_extenso(num):
     """help(mil)
     help(cem)
     help(dez)"""
-    
+
     saida = ''
     print(num, end=' = ')
     # executa se o numero estive na casa do milhar[4º digito diferente de zero]
@@ -126,12 +130,17 @@ def por_extenso(num):
     #  executa se ultimo digito for diferente de zero e digito da dezena for diferente de 1 e no caso de os outros 3 digitos forem igual a zero
     if num % 10 != 0 and num // 10 != 1 or saida == '':
         saida += unidades[num % 10]
-    print(saida)
+    print(f'{saida}\n{"-"*50}')
 
+titulo()
 while True:
-        n = int(input('Informe um número inteiro(entre 0 e 9999): '))
-        numero = teste_num(n)
-        por_extenso(numero)
-        if not continua():
-            break
-    
+    try:
+        numero = int(input('Informe um número inteiro(entre 0 e 9999): '))
+        if numero <= 9999:
+            por_extenso(numero)
+            if not continua():
+                break
+    except:  # excuta se caso o valor informado naoseja um numero inteiro
+        print(f'\033[1;31mPor favor!!! Apenas números inteiros, entre 0 e 9999.\033[0;0m')
+    else:  # executa se Caso o numero digitado seja inteiro e maior que 9999 ou menor que 0
+        print(f'\033[1;31mPor favor, apenas inteiros entre 0 e 9999.\033[0;0m')
