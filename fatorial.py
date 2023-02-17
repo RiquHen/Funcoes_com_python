@@ -7,9 +7,9 @@ import os
 def fatorial(n, show=False):
     """
     ==> Calcula o fatorial de um número informado
-    :param n: número a ser calculado
+    :param n: número informado para se calcular o fatorial
     :param show = True mostra todos os números usados no calculo do Fatorial
-    :return o fatorial de um número digitado:
+    :return :  fatorial de um número informado pelo usuário:
     """
     fat = 1
     for i in range(n, 0, -1):
