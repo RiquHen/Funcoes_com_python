@@ -74,7 +74,7 @@ def main():
                     f'\nForam necessárias: {tentativas} tentativas\n{"~"*50}\033[0;0m')
                 sorteio, minimo, maximo, tentativas = inicio()
                 if not continuar():
-                    break
+
                 os.system('cls')
             else:
                 # verifica_min_max(chute, sorteio, minimo, maximo, tentativas)
