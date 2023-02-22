@@ -1,4 +1,4 @@
-""" Crie um programa que tenha uma função fatorial() que receba dois parâmetros:
+"""  função fatorial() que receba dois parâmetros:
 o primeiro que indique o número a calcular e outro chamado show, que será um valor lógico (opcional)
 indicando se será mostrado ou não na tela o processo de cálculo do fatorial."""
 import os
@@ -8,7 +8,7 @@ def fatorial(n, show=False):
     """
     ==> Calcula o fatorial de um número informado
     :param n: número informado para se calcular o fatorial
-    :param show = True mostra todos os números usados no calculo do Fatorial
+    :param show = True mostra todos os números usados no calculo do Fatorial(ex: 5! = 5x4x3x2x1 = 120)
     :return :  fatorial de um número informado pelo usuário:
     """
     fat = 1
