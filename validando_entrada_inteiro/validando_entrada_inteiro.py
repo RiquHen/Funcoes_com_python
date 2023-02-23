@@ -7,17 +7,14 @@ def leia_int(msg):
     :param msg: pede que seja informado um numero inteiro
     :return: imprime se o caracter digitado é um número inteiro
     """
-    ok = False
     while True:
         n = str(input(msg))
         if n.isnumeric():
             valor = int(n)
             return valor
-            break
         else:
             print("\033[0;31mERRO! Digite um número inteiro válido.\033[0;0m")
-        if ok:
-            break
+        
 
 
 n = leia_int("Digite um número inteiro: ")
