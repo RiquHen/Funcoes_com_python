@@ -2,7 +2,6 @@ from random import choice
 from time import sleep
 
 opcoes = ['pedra', 'papel', 'tesoura']
-jogada = 0
 
 # formata a saida do programa, se ganhou, perdeu ou empate
 def saida(msg):
